@@ -1,0 +1,23 @@
+{
+  "name": "layerci-ghaction",
+  "version": "1.0.0",
+  "description": "This action sends a post request to the layerCI webhook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommy-anderson/layerCI-GHAction.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommy-anderson/layerCI-GHAction/issues"
+  },
+  "homepage": "https://github.com/tommy-anderson/layerCI-GHAction#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0"
+  }
+}

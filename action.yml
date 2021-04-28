@@ -1,0 +1,21 @@
+name: 'LayerCI-Webhook'
+description: 'Manually start a pipeline in LayerCI'
+inputs:
+  apiKey:
+    description: 'LayerCI API Key'
+    required: true
+  apiExtra: 
+    description: :'some extra data exposed as API_EXTRA variable'
+    required: true
+  buttons:
+    description: 'wether to automatically accept any BUTTON instructions in the job'
+    required: true
+  branch:
+    description: 'branch'
+    required: true
+  ref:
+    description: 'SHA of commit to checkout'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
