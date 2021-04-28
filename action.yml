@@ -11,7 +11,7 @@ inputs:
     description: :'some extra data exposed as API_EXTRA variable'
     required: true
   buttons:
-    description: 'wether to automatically accept any BUTTON instructions in the job'
+    description: 'whether to automatically accept any BUTTON instructions in the job'
     required: true
   branch:
     description: 'branch'
