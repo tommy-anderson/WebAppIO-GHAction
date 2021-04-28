@@ -4,6 +4,9 @@ inputs:
   apiKey:
     description: 'LayerCI API Key'
     required: true
+  repoName:
+    description: 'repository name'
+    required: true
   apiExtra: 
     description: :'some extra data exposed as API_EXTRA variable'
     required: true

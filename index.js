@@ -3,13 +3,14 @@ const fetch = require("node-fetch");
 
 try {
   const apiKey = core.getInput('apiKey')
+  const repoName = core.getInput('apiKey')
   const apiExtra = core.getInput('apiExtra')
   const buttons = core.getInput('buttons')
   const branch = core.getInput('branch')
   const ref = core.getInput('ref')
   
   fetch(
-    'https://layerci.com/api/v1/run/repo_name?layertoken='+apiKey,
+    `https://layerci.com/api/v1/run/${repoName}?layertoken=${apiKey}`,
     {
         method: "POST",
         headers: {
