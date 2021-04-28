@@ -1,4 +1,5 @@
 const core = require('@actions/core');
+const fetch = require("node-fetch");
 
 try {
   const apiKey = core.getInput('apiKey')
