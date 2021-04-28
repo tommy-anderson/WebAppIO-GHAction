@@ -9,22 +9,24 @@ try {
   const branch = core.getInput('branch')
   const ref = core.getInput('ref')
   
-  fetch(
-    `https://layerci.com/api/v1/run/${repoName}?layertoken=${apiKey}`,
-    {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            'branch': branch,
-            'ref': ref,
-            'accept_buttons': buttons,
-            'extra': apiExtra,
-        }),
-    }
-).then(res => res.json()).then(json => console.log(json))
-
+  const url = `https://layerci.com/api/v1/run/${repoName}?layertoken=${apiKey}`
+  const payload = 
+  {
+    method: "POST",
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        'branch': branch,
+        'ref': ref,
+        'accept_buttons': buttons,
+        'extra': apiExtra,
+    }),
+}
+  
+fetch(url,payload).then(res => res.json()).then(json => console.log(json))
+console.log(url)
+console.log({payload})
 
 } catch (error) {
   core.setFailed(`Action failed with error ${error}`);
