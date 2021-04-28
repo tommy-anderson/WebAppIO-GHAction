@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 try {
   const apiKey = core.getInput('apiKey')
-  const repoName = core.getInput('apiKey')
+  const repoName = core.getInput('repoName')
   const apiExtra = core.getInput('apiExtra')
   const buttons = core.getInput('buttons')
   const branch = core.getInput('branch')
