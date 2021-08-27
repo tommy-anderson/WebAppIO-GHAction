@@ -9,7 +9,7 @@ try {
   const branch = core.getInput('branch')
   const ref = core.getInput('ref')
   
-  const url = `https://webappio.com/api/v1/run/${repoName}?token=${apiKey}`
+  const url = `https://webapp.io/api/v1/run/${repoName}?token=${apiKey}`
   const payload = 
   {
     method: "POST",
