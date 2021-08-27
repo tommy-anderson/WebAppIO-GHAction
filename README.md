@@ -1,2 +1,3 @@
-# layerCI-GHAction
-This action sends a post request to the layerCI webhook 
+# WebAppIO-GHAction
+
+This action sends a post request to the WebAppIo webhook
