@@ -24,9 +24,12 @@ try {
     }),
 }
   
-fetch(url,payload).then(res => res.json()).then(json => console.log(json))
-console.log(url)
-console.log({payload})
+fetch(url,payload).then(res => res.json()).then(json => {
+  console.log(json)
+  if(json.status!=='ok'){
+    core.setFailed("POST returned something unexpected")
+  }
+})
 
 } catch (error) {
   core.setFailed(`Action failed with error ${error}`);
