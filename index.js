@@ -26,7 +26,7 @@ try {
   fetch(url, payload).then((response) => {
     // Response object https://developer.mozilla.org/en-US/docs/Web/API/Response
     if (!response.ok) {
-      console.log({response})
+      console.log(JSON.stringify(response))
       core.setFailed("POST returned something unexpected");
     }
   });
